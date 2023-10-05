@@ -5,5 +5,7 @@ Bonjour, je suis Youssef ASSEHNOUNE et j'ai 20 ans. Je suis actuellement étudia
 [lien de la page] https://youssef0801.github.io/projet-portfolio/
 
 ![Wireframe](./asset/wireframe1 "Wireframe)
+![Wireframe](./asset/wireframe2 "Wireframe)
+
 
 
