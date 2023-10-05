@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 html{
     font-size: 62.5%;
+
 }
 body{
     font: 1.6rem 'Roboto', sans-serif;
@@ -12,13 +13,30 @@ body{
     display : grid;
     grid-template-rows : auto 1fr auto;
     height: 100vh;
+    transition: all .6s ease-in-out;
 }
 *{
     box-sizing: border-box;
 }
+h2,h3{
+    font-style: oblique;
+    font-size: x-large;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-family: 'Martel', serif;
+    font-family: 'Tilt Neon', cursive;
+    margin-right: 20px;
+}
+h1{
+    font-style: italic;
+    text-align: center;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-family: 'Martel', serif;
+    font-family: 'Tilt Neon', cursive;
+}
 h1,h2,h3,p,ul,ol{
     padding: 0;
     margin: 0;
+    margin-bottom: 2%;
     list-style-type: none;
     font-weight: normal;
 }
@@ -40,7 +58,25 @@ button, input{
 header h1{
     font-family: inherit;
 }
+main{
+max-width: 120rem;
+margin: 0 auto;
+}
+.light-mode-bg{
+    background-color: #fff; 
+    color: #000; 
+}
+.dark-mode h1 {
+    color: #44e9ff; 
+}
 
+.dark-mode section ul.list-logo li {
+    background-color: #444; 
+}
+
+.dark-mode section ul.list-logo li img {
+    filter: invert(1); 
+}
 section ul.gallery-primary-logo img{
     padding: 1rem;
     width: 100%;
@@ -62,11 +98,12 @@ section ul.gallery-primary-logo li{
 section ul.gallery-primary-logo li:hover{
     clip-path: circle(60%);
 }
-
+.dark-logo{
+    color: #000;
+}
 
 
 footer {
     text-align: center;
     margin: 5rem 0 5rem 0;
-    border-top: solid 2px;
 }
