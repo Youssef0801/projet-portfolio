@@ -65,6 +65,11 @@ main{
 max-width: 120rem;
 margin: 0 auto;
 }
+header img{
+    display:flex;
+    margin-left: 100rem;
+    clip-path: circle(60%);
+}
 .light-mode-bg{
     background-color: #fff; 
     color: #000; 
