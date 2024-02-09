@@ -60,15 +60,18 @@ button, input{
 }
 header h1{
     font-family: inherit;
+    padding: 1rem;
+    position: relative;
 }
 main{
 max-width: 120rem;
 margin: 0 auto;
 }
 header img{
-    display:flex;
-    margin-left: 100rem;
-    clip-path: circle(60%);
+    position: relative;
+    display:grid;
+    margin: 0 auto;
+    clip-path: circle(69%);
 }
 .light-mode-bg{
     background-color: #fff; 
