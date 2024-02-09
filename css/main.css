@@ -48,6 +48,25 @@ a{
     text-decoration: none;
     color: #222;
 }
+nav{
+    display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    background-color:#fff;
+    list-style-type: none;
+    cursor: pointer;
+    margin-left: 0,8rem;
+    border-bottom: 0,8rem solid ;
+    font-size: 1,5px;
+    padding: 1rem;
+    width: 100%;
+}
+
+
 button, input{
     padding: 0;
     background: none;
@@ -109,12 +128,30 @@ section ul.gallery-primary-logo li{
 section ul.gallery-primary-logo li:hover{
     clip-path: circle(60%);
 }
+
 .dark-logo{
     color: #000;
 }
+
 
 
 footer {
     text-align: center;
     margin: 5rem 0 5rem 0;
 }
+
+
+
+@media screen and (max-width: 7.5rem) {
+    nav {
+      justify-content: center;
+    }
+    nav ul {
+      display: none;
+    }
+    .page-content header {
+      margin-top: 10%;
+      max-width: 100%;
+    }
+  }
+  
