@@ -1,101 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500&family=Martel:wght@200;300;400&family=Tilt+Neon&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500&family=Martel:wght@200;300;400&family=Tilt+Neon&display=swap');
 
-html{
+html {
     font-size: 62.5%;
-
 }
-body{
+
+body {
     font: 1.6rem 'Roboto', sans-serif;
     margin: 0;
     line-height: 1.6;
     letter-spacing: .1rem;
     background-color: var(--bgcolor-theme);
     color: var(--text-color);
-    display : grid;
-    grid-template-rows : auto 1fr auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     height: 100vh;
     transition: all .6s ease-in-out;
 }
-*{
+
+* {
     box-sizing: border-box;
 }
-h2,h3{
-    font-style: oblique;
-    font-size: x-large;
-    font-family: 'Frank Ruhl Libre', serif;
-    font-family: 'Martel', serif;
-    font-family: 'Tilt Neon', cursive;
-    margin-right: 20px;
-}
-h1{
+
+h1 {
     font-style: italic;
     text-align: center;
     font-family: 'Frank Ruhl Libre', serif;
-    font-family: 'Martel', serif;
-    font-family: 'Tilt Neon', cursive;
+    margin: 0;
 }
-h1,h2,h3,p,ul,ol{
+
+h2, h3 {
+    font-style: oblique;
+    font-size: x-large;
+    font-family: 'Frank Ruhl Libre', serif; /* Utiliser une seule famille de police */
+    margin-right: 20px;
+}
+
+h1, h2, h3, p, ul, ol {
     padding: 0;
     margin: 0;
     margin-bottom: 2%;
     list-style-type: none;
     font-weight: normal;
 }
-/* ajouter les images */
-a{
+
+a {
     text-decoration: none;
     color: #222;
 }
-nav{
+
+nav {
     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     position: sticky;
     z-index: 10;
     top: 0;
-    background-color:#fff;
-    list-style-type: none;
-    cursor: pointer;
-    margin-left: 0,8rem;
-    border-bottom: 0,8rem solid ;
-    font-size: 1,5px;
+    background-color: #fff;
+    margin-left: 0.8rem; /* Correction de la virgule */
+    border-bottom: 0.8rem solid #ccc; /* Ajout de la couleur */
+    font-size: 1.5rem; /* Correction de la virgule */
     padding: 1rem;
     width: 100%;
 }
 
-
-button, input{
+button, input {
     padding: 0;
     background: none;
     border: 0;
 }
-:root{
+
+:root {
     color-scheme: light dark; 
     --bgcolor-theme: #040404;
     --text-color: #fff;
 }
-header h1{
-    font-family: inherit;
+
+header h1 {
     padding: 1rem;
     position: relative;
 }
-main{
-max-width: 120rem;
-margin: 0 auto;
+
+main {
+    max-width: 120rem;
+    margin: 0 auto;
 }
-header img{
+
+header img {
     position: relative;
-    display:grid;
+    display: grid;
     margin: 0 auto;
     clip-path: circle(69%);
 }
-.light-mode-bg{
+
+.light-mode-bg {
     background-color: #fff; 
     color: #000; 
 }
+
 .dark-mode h1 {
     color: #44e9ff; 
 }
@@ -107,51 +110,49 @@ header img{
 .dark-mode section ul.list-logo li img {
     filter: invert(1); 
 }
-section ul.gallery-primary-logo img{
+
+section ul.gallery-primary-logo img {
     padding: 1rem;
     width: 100%;
 }
 
-section ul.gallery-primary-logo
-{
+section ul.gallery-primary-logo {
     padding: 1rem 0;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
 }
-section ul.gallery-primary-logo li{
-    clip-path: circle(40%); /* masque */
+
+section ul.gallery-primary-logo li {
+    clip-path: circle(40%);
     transition: all .5s ease-in-out;
     cursor: pointer;
     filter: drop-shadow(0 0 0.60rem rgb(224, 231, 123));
 }
-section ul.gallery-primary-logo li:hover{
+
+section ul.gallery-primary-logo li:hover {
     clip-path: circle(60%);
 }
 
-.dark-logo{
+.dark-logo {
     color: #000;
 }
 
-
-
 footer {
     text-align: center;
-    margin: 5rem 0 5rem 0;
+    margin: 5rem 0;
 }
 
-
-
-@media screen and (max-width: 7.5rem) {
+/* Media Queries */
+@media screen and (max-width: 768px) { /* Correction de la largeur en pixels */
     nav {
-      justify-content: center;
+        justify-content: center;
     }
     nav ul {
-      display: none;
+        display: none; /* Cela peut être modifié en fonction de la logique de votre menu mobile */
     }
     .page-content header {
-      margin-top: 10%;
-      max-width: 100%;
+        margin-top: 10%;
+        max-width: 100%;
     }
-  }
-  
+}
