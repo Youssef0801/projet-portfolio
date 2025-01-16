@@ -9,6 +9,7 @@
 node_modules/
 application_voyage/
 
+
 # Ignore les fichiers de build
 dist/
 build/
