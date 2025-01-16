@@ -47,6 +47,7 @@ h1, h2, h3, p, ul, ol {
 a {
     text-decoration: none;
     color: #fff;
+    background-color: #e1f109;
 }
 
 nav {
@@ -103,7 +104,7 @@ header img {
 }
 
 .dark-mode h1 {
-    color: #44e9ff; 
+    color: #fff; 
 }
 
 .dark-mode section ul.list-logo li {
