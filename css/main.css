@@ -32,7 +32,7 @@ h1 {
 h2, h3 {
     font-style: oblique;
     font-size: x-large;
-    font-family: 'Frank Ruhl Libre', serif; /* Utiliser une seule famille de police */
+    font-family: 'Frank Ruhl Libre', serif;
     margin-right: 20px;
 }
 
@@ -46,7 +46,7 @@ h1, h2, h3, p, ul, ol {
 
 a {
     text-decoration: none;
-    color: #222;
+    color: #fff;
 }
 
 nav {
@@ -67,8 +67,11 @@ nav {
 
 button, input {
     padding: 0;
-    background: none;
+    background: #44e9ff;
     border: 0;
+    font-size: 1.5rem; /* Correction de la virgule */
+    padding: 1rem;
+    width: 100%;
 }
 
 :root {
@@ -95,7 +98,7 @@ header img {
 }
 
 .light-mode-bg {
-    background-color: #fff; 
+    background-color: #e1f109; 
     color: #000; 
 }
 
@@ -135,7 +138,7 @@ section ul.gallery-primary-logo li:hover {
 }
 
 .dark-logo {
-    color: #000;
+    color: #f2d810;
 }
 
 footer {
