@@ -71,9 +71,10 @@ h1, h2, h3, p, ul, ol {
   /* LIENS */
 a {
     text-decoration: none;
-    color: #fff;
-    background-color: #8e2222; 
+    color: #070303;
+    background-color: #99c4dd; 
 }
+
 
 
 /* NAVIGATION */
