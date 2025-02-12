@@ -1,84 +1,203 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark"> <!-- data-theme conservé pour la gestion du mode (dark/light) -->
 <head>
+    <!-- Meta tags de base -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de développeur A. Youssef, mettant en avant ses compétences en accessibilité et SEO.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./font/stylesheet.css">
+    <meta name="keywords" content="développeur web, portfolio, BTS SIO, stage, alternance, Java, PHP, JavaScript">
+    <meta name="author" content="A. Youssef">
+
+    <!-- Open Graph meta tags ajoutés pour un meilleur partage sur les réseaux sociaux -->
+    <meta property="og:title" content="Portfolio A. Youssef - Développeur Web">
+    <meta property="og:description" content="Portfolio d'un étudiant en BTS SIO option SLAM spécialisé en développement web">
+    <meta property="og:url" content="https://youssef0801.github.io/projet-portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://youssef0801.github.io/projet-portfolio//asset/software-developer-6521720_1280.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Préchargement des polices et de l'image critique pour optimiser le chargement -->
+    <link rel="preload" href="./css/main.css" as="style"> <!-- Améliore le chargement des polices -->
+    <link rel="preload" href="./asset/software-developer-6521720_1280.jpg" as="image"> <!-- Optimise le LCP -->
+
+    <!-- Favicon et icônes -->
+    <link rel="shortcut icon" href="./favicon/favicon_ya/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/favicon_ya/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon_ya/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon_ya/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/favicon_ya/site.webmanifest">
+
+    <!-- Feuille de style principale -->
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <link rel="manifest" href="./favicon/site.webmanifest">
     <title>Portfolio YOUSSEF</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="projets.html">Mes projets</a></li>
-                <li><a href="mon_cv.html">Mon CV</a></li>
-                <li><a href="projet_java.html">Veille technologique</a></li>
-            </ul>             
+    <!-- HEADER -->
+    <header class="main-header"> <!-- Classe ajoutée pour une identification claire et un styling dédié -->
+        <nav class="navbar">
+            <div class="nav-container"> <!-- Conteneur interne pour structurer la navigation -->
+                <!-- Bouton hamburger amélioré avec trois spans pour un visuel moderne -->
+                <button class="menu-toggle" aria-label="Menu mobile" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <!-- Logo YA  -->
+                <a href="./asset/YA.jpg" class="nav-brand">YOUSSEF</a>
+                <!-- Liens de navigation mis à jour pour pointer vers les sections correspondantes -->
+                <ul class="nav-links">
+                    <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                    <li><a href="#projets" class="nav-link">Projets</a></li>
+                    <li><a href="#competences" class="nav-link">Compétences</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <!-- Bouton de changement de thème (clair/sombre) -->
+                <button class="theme-toggle" aria-label="Basculer mode clair/sombre">
+                    <span class="theme-icon">🌓</span>
+                </button>
+            </div>
         </nav>
-        <h1>
-            <span>&#127891;</span> Développeur Web
-          <button aria-label="Activer le mode clair">
-                <span class="material-symbols-outlined" aria-hidden="true">Dark/Clair</span>
-                <li><img src="asset/icons8-flash-on-96.png" alt="flash"></li>
-            </button>
+        <!-- Titre principal du site avec sous-titre -->
+        <h1 class="main-title">
+            <span aria-hidden="true">🎓</span>
+            <span>Développeur Web</span>
+            <small>Étudiant en BTS SIO SLAM</small>
         </h1>
     </header>
 
+    <!-- MAIN -->
     <main>
-        <section>
+        <!-- SECTION PRÉSENTATION / HERO -->
+        <section id="accueil" class="presentation">
             <h2>Présentation</h2>
-            <p>
-                Étudiant en BTS SIO option SLAM, passionné par le développement web,
-                avec une connaissance en Java, PHP, HTML, CSS et JavaScript.
-                Actuellement à la recherche d'un stage ou d'une alternance en tant que
-                Développeur Web pour mettre en pratique mes compétences techniques et
-                contribuer à des projets concrets
-            </p>
+            <div class="presentation-content">
+                <p class="lead-text">
+                    Passionné par la création de solutions numériques innovantes,
+                    je suis un Étudiant en BTS SIO option SLAM, passionné par 
+                    la création de solutions numériques innovantes et le
+                    développement web, avec une connaissance en Java, PHP, HTML,
+                    CSS et JavaScript. Actuellement à la recherche d'un stage ou
+                    d'une alternance en tant que Développeur Web pour mettre en
+                    pratique mes compétences techniques et contribuer à des projets concrets
+
+                <div class="cta-container">
+                    <!-- Appel à l'action pour contacter -->
+                    <a href="#contact" class="cta">Contactez-moi</a>
+                    <!-- Lien pour télécharger le CV -->
+                    <a href="./cv.pdf" download class="cta secondary">Télécharger mon CV</a>
+                </div>
+            </div>
+            <!-- Image de présentation optimisée avec lazy loading -->
+            <img src="./asset/software-developer-6521720_1280.jpg" alt="Développeur au travail" class="hero-image" loading="lazy">
         </section>
 
-        <img src="./asset/software-developer-6521720_1280.jpg" alt="Un développeur logiciel travaillant sur un ordinateur" width="1200" height="600" loading="lazy">
-
-        <section>
-            <h3>Langages &amp; Frameworks</h3>
-            <ul class="gallery-primary-logo" aria-label="Logos des langages de programmation">
-                <li><img src="asset/js.png" alt="Logo JavaScript"></li>
-                <li><img src="asset/python.png" alt="Logo Python"></li>
-                <li><img src="asset/php.png" alt="Logo PHP"></li>
-                <li><img src="asset/json.png" alt="Logo JSON"></li>
-                <li><img src="asset/css.png" alt="Logo CSS"></li>
-                <li><img src="asset/html.png" alt="Logo HTML"></li>
-            </ul>
+        <!-- SECTION COMPÉTENCES -->
+        <section id="competences" class="competences">
+            <h2>Compétences Techniques</h2>
+            <div class="competences-grid">
+                <!-- Exemple de compétence avec tooltip pour plus d'information -->
+                <div class="competence-item">
+                    <img src="asset/js.png" alt="JavaScript" loading="lazy" data-tooltip="JavaScript ES6+">
+                    <span class="sr-only">JavaScript ES6+</span> <!-- Texte pour lecteurs d'écran -->
+                </div>
+                <!-- Compétence HTML/CSS -->
+                <div class="competence-item">
+                    <img src="asset/html.png" alt="HTML5/CSS3" loading="lazy" data-tooltip="HTML5/CSS3">
+                    <span class="sr-only">HTML5/CSS3</span>
+                </div>
+                <!-- Compétence PHP -->
+                <div class="competence-item">
+                    <img src="asset/php.png" alt="PHP" loading="lazy" data-tooltip="PHP">
+                    <span class="sr-only">PHP</span>
+                </div>
+                <!-- Ajoutez d'autres compétences au besoin -->
+            </div>
         </section>
 
-        <section>
-            <h2>Mes Projets</h2>
-            <article class="projet">
-                <h3>Nom du projet 1</h3>
-                <p>Description du projet 1. Technologies utilisées : HTML, CSS, JavaScript.</p>
-                <a href="lien_du_projet" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-            </article>
-            <article class="projet">
-                <h3>Nom du projet 2</h3>
-                <p>Description du projet 2. Technologies utilisées : JAVA, MYSQL.</p>
-                <a href="lien_du_projet" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-            </article>
+        <!-- SECTION PROJETS -->
+        <section id="projets" class="mes-projets">
+            <h2>Mes Réalisations</h2>
+            <div class="projets-container">
+                <!-- Carte de projet 1 -->
+                <article class="projet-card">
+                    <div class="projet-image">
+                        <img src="asset/php.png" alt="Projet 1" loading="lazy">
+                    </div>
+                    <div class="projet-info">
+                        <h3>Nom du projet 1</h3>
+                        <div class="projet-technos">
+                            <span class="techno-tag">HTML</span>
+                            <span class="techno-tag">CSS</span>
+                            <span class="techno-tag">JavaScript</span>
+                        </div>
+                        <p class="projet-description">
+                            Description du projet 1. Technologies utilisées : HTML, CSS, JavaScript.
+                        </p>
+                        <a href="lien_du_projet" class="projet-link" target="_blank" rel="noopener noreferrer" aria-label="Voir le projet 1 (nouvelle fenêtre)">Voir le projet ↗</a>
+                    </div>
+                </article>
+                <!-- Carte de projet 2 -->
+                <article class="projet-card">
+                    <div class="projet-image">
+                        <img src="asset/python.png" alt="Projet 2" loading="lazy">
+                    </div>
+                    <div class="projet-info">
+                        <h3>Nom du projet 2</h3>
+                        <div class="projet-technos">
+                            <span class="techno-tag">JAVA</span>
+                            <span class="techno-tag">MySQL</span>
+                        </div>
+                        <p class="projet-description">
+                            Description du projet 2. Technologies utilisées : JAVA, MySQL.
+                        </p>
+                        <a href="lien_du_projet" class="projet-link" target="_blank" rel="noopener noreferrer" aria-label="Voir le projet 2 (nouvelle fenêtre)">Voir le projet ↗</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION CONTACT -->
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <form class="contact-form" id="contactForm" action="/send" method="POST">
+                <div class="form-group">
+                    <label for="email">Email :</label> <!-- Label associé pour l'accessibilité -->
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message :</label> <!-- Label associé pour l'accessibilité -->
+                    <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+                </div>
+                <button type="submit" class="cta">Envoyer</button>
+            </form>
         </section>
     </main>
 
-    <footer>
-        <h4>Navigation &amp; Contact</h4>
-        <p>&copy; 2024 A. Youssef</p>
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Réseaux</h4>
+                <ul class="social-links">
+                    <li><a href="#"><img src="asset/linkedin-icon.png" alt="LinkedIn" loading="lazy"></a></li>
+                    <li><a href="#"><img src="asset/github-icon.png" alt="GitHub" loading="lazy"></a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 A. Youssef - Tous droits réservés</p>
     </footer>
 
+    <!-- Inclusion du script JavaScript -->
     <script src="./js/app.js"></script>
 </body>
 </html>

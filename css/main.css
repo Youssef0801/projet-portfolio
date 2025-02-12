@@ -1,27 +1,51 @@
+/* Importation des polices depuis Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500&family=Martel:wght@200;300;400&family=Tilt+Neon&display=swap');
 
-html {
+:root {
+    /* Couleurs principales et secondaires */
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e67e22;
+    
+    /* Couleurs de texte et fond pour le mode clair */
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+    
+    /* Couleurs pour le mode sombre */
+    --dark-bg: #2c3e50;
+    --dark-text: #ecf0f1;
+    
+    /* Transition globale */
+    --transition: all 0.3s ease;
+    
+    /* Définition de la taille de police de base pour un calcul en rem cohérent */
     font-size: 62.5%;
 }
 
-body {
-    font: 1.6rem 'Roboto', sans-serif;
-    margin: 0;
-    line-height: 1.6;
-    letter-spacing: .1rem;
-    background-color: var(--bgcolor-theme);
-    color: var(--text-color);
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    height: 100vh;
-    transition: all .6s ease-in-out;
-}
 
-* {
+/* RESET ET BOX-SIZING */
+*, *::before, *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+
+/* STYLES GLOBAUX DU BODY */
+body {
+    font-family: 'Roboto', system-ui, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: var(--transition);
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Permet de disposer header, main et footer */
+    height: 100vh;
+}
+
+
+/* TYPOGRAPHIE : TITRES, PARAGRAPHES ET LISTES */
 h1 {
     font-style: italic;
     text-align: center;
@@ -33,130 +57,166 @@ h2, h3 {
     font-style: oblique;
     font-size: x-large;
     font-family: 'Frank Ruhl Libre', serif;
-    margin-right: 20px;
+    margin-right: 2rem; /* Utilisation de rem pour la cohérence avec la base */
 }
 
+/* Réinitialisation et harmonisation des marges pour les titres, paragraphes et listes */
 h1, h2, h3, p, ul, ol {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 2%;
+    margin: 0 0 2% 0;
     list-style-type: none;
     font-weight: normal;
 }
 
+
+  /* LIENS */
 a {
     text-decoration: none;
     color: #fff;
-    background-color: #e1f109;
+    background-color: #8e2222; 
 }
 
-nav {
+
+/* NAVIGATION */
+.navbar {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    z-index: 10;
+    padding: 1rem 5%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
     top: 0;
-    background-color: #fff;
-    margin-left: 0.8rem; /* Correction de la virgule */
-    border-bottom: 0.8rem solid #ccc; /* Ajout de la couleur */
-    font-size: 1.5rem; /* Correction de la virgule */
-    padding: 1rem;
-    width: 100%;
+    z-index: 1000;
 }
 
-button, input {
-    padding: 0;
-    background: #44e9ff;
-    border: 0;
-    font-size: 1.5rem; /* Correction de la virgule */
-    padding: 1rem;
-    width: 100%;
+.nav-list,
+.nav-links {
+    display: flex;
+    gap: 2rem;
 }
 
-:root {
-    color-scheme: light dark; 
-    --bgcolor-theme: #040404;
-    --text-color: #fff;
+.nav-link {
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: var(--transition);
 }
 
-header h1 {
-    padding: 1rem;
-    position: relative;
+.nav-link:hover {
+    background-color: var(--primary-color);
+    color: white;
 }
 
-main {
-    max-width: 120rem;
-    margin: 0 auto;
-}
-
-header img {
-    position: relative;
-    display: grid;
-    margin: 0 auto;
-    clip-path: circle(69%);
-}
-
-.light-mode-bg {
-    background-color: #e1f109; 
-    color: #000; 
-}
-
-.dark-mode h1 {
-    color: #fff; 
-}
-
-.dark-mode section ul.list-logo li {
-    background-color: #444; 
-}
-
-.dark-mode section ul.list-logo li img {
-    filter: invert(1); 
-}
-
-section ul.gallery-primary-logo img {
-    padding: 1rem;
-    width: 100%;
-}
-
-section ul.gallery-primary-logo {
-    padding: 1rem 0;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1rem;
-}
-
-section ul.gallery-primary-logo li {
-    clip-path: circle(40%);
-    transition: all .5s ease-in-out;
+/* Bouton de menu (hamburger) pour mobile */
+.menu-toggle {
+    background: none;
+    border: none;
     cursor: pointer;
-    filter: drop-shadow(0 0 0.60rem rgb(224, 231, 123));
 }
 
-section ul.gallery-primary-logo li:hover {
-    clip-path: circle(60%);
+
+/* SECTION HERO / PRÉSENTATION */
+.hero,
+.presentation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 8rem 5% 4rem;
+    gap: 4rem;
 }
 
-.dark-logo {
-    color: #f2d810;
+/* Contenu de la section hero / présentation animé */
+.hero-content,
+.presentation-content {
+    animation: slideInLeft 0.8s ease-out;
 }
 
-footer {
-    text-align: center;
-    margin: 5rem 0;
+/* Image de la section hero */
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Media Queries */
-@media screen and (max-width: 768px) { /* Correction de la largeur en pixels */
-    nav {
-        justify-content: center;
+
+/* GRILLE DES PROJETS */
+.projets-grid,
+.projets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+/* Style des cartes de projet */
+.projet-card,
+.projet-info {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.projet-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* MODE SOMBRE */
+[data-theme="dark"] {
+    --text-color: var(--dark-text);
+    --bg-color: var(--dark-bg);
+}
+
+
+/*   ANIMATIONS */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
     }
-    nav ul {
-        display: none; /* Cela peut être modifié en fonction de la logique de votre menu mobile */
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
-    .page-content header {
-        margin-top: 10%;
-        max-width: 100%;
+}
+
+
+/* RESPONSIVE DESIGN*/
+@media (max-width: 768px) {
+    .hero,
+    .presentation {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    /* Pour le menu mobile : le menu se cache par défaut et s'affiche quand le bouton est actif */
+    .nav-list,
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    /* Affichage du menu lorsque le bouton menu-toggle est activé */
+    .menu-toggle.active + .nav-list,
+    .menu-toggle.active + .nav-links {
+        display: flex;
+    }
+}
+
+/* Réduction des animations pour les utilisateurs sensibles */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
     }
 }
