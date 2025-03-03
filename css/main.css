@@ -1,108 +1,140 @@
-/* Importation des polices depuis Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500&family=Martel:wght@200;300;400&family=Tilt+Neon&display=swap');
 
 :root {
-    /* Couleurs principales et secondaires */
+    /* Couleurs */
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
-    --accent-color: #e67e22;
-    
-    /* Couleurs de texte et fond pour le mode clair */
+    --accent-color: #a5744a;
     --text-color: #333;
     --bg-color: #f8f9fa;
-    
-    /* Couleurs pour le mode sombre */
     --dark-bg: #2c3e50;
     --dark-text: #ecf0f1;
     
-    /* Transition globale */
+    /* Espacements */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 3rem;
+    
+    /* Typographie */
+    --font-body: 'Roboto', system-ui, sans-serif;
+    --font-heading: 'Frank Ruhl Libre', serif;
+    --line-height: 1.6;
+    
+    /* Effets */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
     
-    /* Définition de la taille de police de base pour un calcul en rem cohérent */
+    /* Taille de police */
     font-size: 62.5%;
 }
 
+/* Thème sombre */
+[data-theme="dark"] {
+    --text-color: var(--dark-text);
+    --bg-color: var(--dark-bg);
+}
 
-/* RESET ET BOX-SIZING */
+/* Reset étendu */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
-/* STYLES GLOBAUX DU BODY */
+/* Styles globaux */
 body {
     font-size: 1.6rem;
-    font-family: 'Roboto', system-ui, sans-serif;
-    line-height: 1.6;
+    font-family: var(--font-body);
+    line-height: var(--line-height);
     color: var(--text-color);
     background-color: var(--bg-color);
     transition: var(--transition);
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Permet de disposer header, main et footer */
-    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 
-/* TYPOGRAPHIE : TITRES, PARAGRAPHES ET LISTES */
+/* Typographie */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    margin: 0 0 2rem 0;
+}
+
 h1 {
     font-style: italic;
     text-align: center;
-    font-family: 'Frank Ruhl Libre', serif;
-    margin: 0;
 }
-
+.header-icon {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
 h2, h3 {
     font-style: oblique;
-    font-size: x-large;
-    font-family: 'Frank Ruhl Libre', serif;
-    margin-right: 2rem; /* Utilisation de rem pour la cohérence avec la base */
+    font-size: 2.4rem;
 }
 
-/* Réinitialisation et harmonisation des marges pour les titres, paragraphes et listes */
-h1, h2, h3, p, ul, ol {
-    margin: 0 0 2% 0;
-    list-style-type: none;
-    font-weight: normal;
-}
-
-
-  /* LIENS */
-a {
-    text-decoration: none;
-    color: #070303;
-    background-color: #99c4dd; 
-}
-
-
-
-/* NAVIGATION */
+/* Navigation */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: var(--space-sm) 5%;
+    background-color: var(--accent-color);
+    box-shadow: var(--shadow);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    overflow: hidden;
 }
 
-.nav-list,
-.nav-links {
+.nav-container {
     display: flex;
-    gap: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links {
+    list-style: none; 
+    text-decoration: none;
+    display: flex;
+    gap: var(--space-lg);
 }
 
 .nav-link {
     color: var(--primary-color);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 0.4rem;
     transition: var(--transition);
+    cursor: pointer;
 }
 
 .nav-link:hover {
@@ -110,71 +142,111 @@ a {
     color: white;
 }
 
-/* Bouton de menu (hamburger) pour mobile */
-.menu-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-
-/* SECTION HERO / PRÉSENTATION */
-.hero,
+/* Sections principales */
 .presentation {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
     align-items: center;
     padding: 8rem 5% 4rem;
-    gap: 4rem;
 }
 
-/* Contenu de la section hero / présentation animé */
-.hero-content,
-.presentation-content {
-    animation: slideInLeft 0.8s ease-out;
-}
-
-/* Image de la section hero */
 .hero-image {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
 }
 
-
-/* GRILLE DES PROJETS */
-.projets-grid,
-.projets-container {
+/* Compétences */
+.competences-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem 5%;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-md);
+    padding: var(--space-md) 5%;
 }
 
-/* Style des cartes de projet */
-.projet-card,
-.projet-info {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.competence-item img {
+    width: 80px;
+    height: 80px;
     transition: transform 0.3s ease;
 }
 
+.competence-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Projets */
+.projets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+    padding: var(--space-md) 5%;
+}
+.projet-image{
+    width: 40%;
+    height: auto;
+    border-radius: 1rem;
+}
+.projet-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
 .projet-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-0.5rem);
 }
 
-
-/* MODE SOMBRE */
-[data-theme="dark"] {
-    --text-color: var(--dark-text);
-    --bg-color: var(--dark-bg);
+/* Formulaire */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--space-md);
 }
 
+.form-group {
+    margin-bottom: var(--space-md);
+}
 
-/*   ANIMATIONS */
+input, textarea {
+    width: 100%;
+    padding: var(--space-xs);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .presentation {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-color);
+        flex-direction: column;
+        padding: var(--space-md);
+    }
+    
+    .menu-toggle.active + .nav-links {
+        display: flex;
+    }
+    
+    img:not(.nav-brand) {
+        display: none;
+    }
+}
+
+/* Animations */
 @keyframes slideInLeft {
     from {
         opacity: 0;
@@ -186,36 +258,6 @@ a {
     }
 }
 
-
-/* RESPONSIVE DESIGN*/
-@media (max-width: 768px) {
-    .hero,
-    .presentation {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    /* Pour le menu mobile : le menu se cache par défaut et s'affiche quand le bouton est actif */
-    .nav-list,
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: white;
-        flex-direction: column;
-        padding: 1rem;
-    }
-    
-    /* Affichage du menu lorsque le bouton menu-toggle est activé */
-    .menu-toggle.active + .nav-list,
-    .menu-toggle.active + .nav-links {
-        display: flex;
-    }
-}
-
-/* Réduction des animations pour les utilisateurs sensibles */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation: none !important;

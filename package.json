@@ -2,7 +2,7 @@
   "name": "projet-portfolio",
   "version": "1.0.0",
   "description": "Projet portflolio\r Vous trouvez ici le lien vers mon portfolio\r \"\"",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "build": "babel --no-babelrc src -w -d js --preset=env"
   },

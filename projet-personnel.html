@@ -4,44 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet M2L en Java</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-            line-height: 1.6;
-        }
-        .technologies {
-            background: #ddd;
-            padding: 10px;
-            margin: 20px 0;
-        }
-        footer {
-            margin-top: 20px;
-            padding: 10px;
-            background: #333;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="css/personnel.css ">
+    <link rel="shortcut icon" href="./favicon/favicon_ya/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/favicon_ya/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon_ya/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon_ya/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/favicon_ya/site.webmanifest">
 </head>
 <body>
     <div class="container">
+        <section>
         <h1>Projet M2L en Java</h1>
         <p><strong>Description :</strong>  Ce projet, fait en JAVA, propose la gestion des employés de ligues.<br>
             Il a été réalisé avec Kilian Junker. <br>
@@ -50,8 +22,9 @@
             leurs employés(Création, ajout, édition et suppression).
             Pour chaque ligue, on peut choisir, toujours en ligne de commande, un de ses employés comme administrateur.
             s'il on n'en choisit aucun, c'est le super Admin qui administre la ligue.
-           </p></p>
-        
+        </p></p>
+        </section>
+        <section>
         <h2>Fonctionnalités</h2>
         <ul>
             <li>Gestion des employés avec dates d'arrivée et de départ</li>
@@ -59,22 +32,34 @@
             <li>Système de réservation en ligne</li>
             <li>Authentification et rôles utilisateurs</li>
         </ul>
-        
+    </section>
+    <section>
+        <h2>Modification</h2>
+        <h3>Editer une ligue</h3>
+        <p>Changer Admin <br>Retirer Admin</p>
+        <h3>Gestion de l'employé</h3>
+        <p>A l'ajoute d'un employé : saisir la Date inscription <br>
+            Selectionnement d'un employé : Modifier ou supprimer l'employé <br>
+            Exception date invalide ( futur ou passé )</p>
+    </section>
+    <section>
         <h2>Technologies utilisées</h2>
         <div class="technologies">
             <p>✔️ Java (Spring Boot) | ✔️ MySQL | ✔️ Git</p>
         </div>
         <h2>Notre mcd est le suivant: </h2>
         <img src="./asset/mcd.png" alt="mcd de notre projet">
-
+        <h2>Notre arbre heuristique</h2>
+        <img src="./asset/arbre-heuristique.png" alt="arbre heuristique de notre projet">
         <h2>Lien vers le code source:</h2>
         <a href="https://github.com/Youssef0801/personnel"></a>
         <h2>Contact</h2>
         <p>Si vous avez des questions ou souhaitez contribuer, contactez-moi à <strong>assehnoune.youssef@gmail.com</strong>.</p>
     </div>
-    
+</section>
     <footer>
         &copy; 2025 - Projet M2L en Java | Tous droits réservés
+
     </footer>
 </body>
 </html>
