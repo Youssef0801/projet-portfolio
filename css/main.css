@@ -122,7 +122,12 @@ h2, h3 {
     display: flex;
     gap: var(--space-lg);
 }
-
+.theme-toggle {
+    display: flex;
+    position: absolute;
+    gap: 10px;
+    cursor: pointer;
+}
 .nav-link {
     color: var(--primary-color);
     padding: var(--space-xs) var(--space-sm);
