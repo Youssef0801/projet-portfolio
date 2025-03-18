@@ -37,19 +37,6 @@
 }
 
 
-/* Styles globaux */
-body {
-    font-size: 1.6rem;
-    font-family: var(--font-body);
-    line-height: var(--line-height);
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    transition: var(--transition);
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-}
-
 
 /* Typographie */
 h1, h2, h3 {
@@ -60,6 +47,8 @@ h1, h2, h3 {
 h1 {
     font-style: italic;
     text-align: center;
+    margin-top: 90px;
+    
 }
 .header-icon {
     width: 50px;
@@ -69,6 +58,32 @@ h1 {
 h2, h3 {
     font-style: oblique;
     font-size: 2.4rem;
+}
+
+.a-propos {
+    padding: var(--space-lg) 5%;
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    margin: var(--space-lg) auto;
+    box-shadow: var(--shadow);
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.profil-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: var(--shadow);
 }
 
 /* Navigation */
@@ -81,19 +96,10 @@ h2, h3 {
     box-shadow: var(--shadow);
     position: fixed;
     width: 100%;
+    padding: 2rem;
     top: 0;
     z-index: 1000;
     overflow: hidden;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    max-width: 130rem;
-    margin: 0 auto;
-    padding: 0 1rem;
 }
 
 .menu-toggle {
@@ -142,15 +148,107 @@ h2, h3 {
 }
 
 /* Sections principales */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.profil-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: var(--shadow);
+}
+.formations {
+    padding: var(--space-lg) 5%;
+    margin-top: var(--space-lg);
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.formation-list {
+    padding-left: 1rem;
+    margin-top: var(--space-md);
+}
+
+.formation-list li {
+    margin-bottom: var(--space-sm);
+    border-bottom: 1px dashed var(--accent-color);
+    padding-bottom: var(--space-xs);
+}
+.soft-skills {
+    padding: var(--space-lg) 5%;
+    margin-top: var(--space-lg);
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 1rem;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+.skills-list li {
+    padding: var(--space-xs) var(--space-sm);
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 2rem;
+}
+.interets {
+    padding: var(--space-lg) 5%;
+    margin-top: var(--space-lg);
+}
+
+.interets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-sm);
+}
+
+.interet-item {
+    text-align: center;
+}
+
+.interet-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    box-shadow: var(--shadow);
+}
+
+.interet-item p {
+    margin-top: var(--space-xs);
+}
+.langues {
+    padding: var(--space-lg) 5%;
+    margin-top: var(--space-lg);
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.langues ul li {
+    margin-bottom: var(--space-xs);
+}
+
 .presentation {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-lg);
     align-items: center;
     padding: 8rem 5% 4rem;
-}
-.cta-xontainer{
-    width: 600px;
 }
 .hero-image {
     width: 100%;
@@ -199,6 +297,38 @@ h2, h3 {
 
 .projet-card:hover {
     transform: translateY(-0.5rem);
+}
+/* Section BTS et Veille Technologique */
+#bts-sio, #veille-techno, #temoignages {
+    padding: var(--space-lg) 5%;
+    background-color: var(--bg-color);
+    margin-top: var(--space-lg);
+    box-shadow: var(--shadow);
+    border-radius: 0.8rem;
+}
+
+#veille-techno article {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+#veille-techno article:last-child {
+    border-bottom: none;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 5px solid var(--accent-color);
+    padding-left: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+cite {
+    display: block;
+    text-align: right;
+    margin-top: var(--space-xs);
+    color: var(--secondary-color);
 }
 
 /* Formulaire */

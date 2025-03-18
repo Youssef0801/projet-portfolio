@@ -37,30 +37,26 @@
     <!-- HEADER -->
     <header class="main-header">
         <nav class="navbar">
-            <div class="nav-container"> <!-- Conteneur interne pour structurer la navigation -->
-                <!-- Bouton amélioré avec trois spans pour un visuel moderne -->
-                <button class="menu-toggle" aria-label="Menu mobile" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
                 <!-- Liens de navigation mis à jour pour pointer vers les sections correspondantes -->
                 <ul class="nav-links">
                     <li><a href="index.html" class="nav-link active">Accueil</a></li>
-                    <li><a href="#projets" >Projets</a></li>
-                    <li><a href="#competences" >Compétences</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#veille-techo" > Veille technologique</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#veille-techno">Veille technologique</a></li>
                     <li><a href="#bts-sio">BTS SIO</a></li>
-                    <li><a href="#cv">CV</a></li>
-                    <li><a href="#contact" >Contact</a></li>
+                    <li><a href="#a-propos">À propos</a></li>
+                    <li><a href="#formations">Formations</a></li>
+                    <li><a href="#soft-skills">Compétences personnelles</a></li>
+                    <li><a href="#interets">Centres d'intérêt</a></li>
+                    <li><a href="#langues">Langues</a></li>
+                    <li><a href="#temoignages">Témoignages</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
+                
                 <!-- Bouton de changement de thème (clair/sombre) -->
                 <button class="theme-toggle" aria-label="Basculer mode clair/sombre">
                     <span class="theme-icon">🌓</span>
                 </button>
-            </div>
         </nav>
 
     </header>
@@ -73,11 +69,12 @@
             <strong>Développeur Web</strong>
             <small>Étudiant en BTS SIO SLAM</small>
         </h1>
-        <!-- SECTION PRÉSENTATION  -->
-        <section id="accueil" class="presentation">
-            <h2>Présentation</h2>
-            <div class="presentation-content">
-                <p class="lead-text">
+          <!-- SECTION PRÉSENTATION  -->
+        <section id="a-propos" class="a-propos">
+            <h2>À propos de moi</h2>
+            <div class="about-container">
+                <img src="./asset/photo-profil.jpg" alt="Photo de profil" class="profil-image">
+                <p>
                     Passionné par la création de solutions numériques innovantes,
                     je suis un Étudiant en BTS SIO option SLAM, passionné par 
                     la création de solutions numériques innovantes et le
@@ -85,49 +82,25 @@
                     CSS et JavaScript. Actuellement à la recherche d'un stage ou
                     d'une alternance en tant que Développeur Web pour mettre en
                     pratique mes compétences techniques et contribuer à des projets concrets
-
-                <div class="cta-container">
-                    <a href="#contact" class="cta">Contactez-moi</a>
-                    <a href="./cv.pdf" download class="cta secondary">Télécharger mon CV</a>
-                </div>
-            </div>
-            <!-- Image de présentation  -->
-            <img src="./asset/software-developer-6521720_1280.jpg" alt="Développeur au travail" class="hero-image"
-            loading="lazy">
-        </section>
-
-        <!-- SECTION COMPÉTENCES -->
-        <section id="competences" class="competences">
-            <h2>Compétences Techniques</h2>
-            <div class="competences-grid">
-                    <!-- Compétence JS -->
-                <div class="competence-item">
-                    <img src="asset/css.png" alt="Css" loading="lazy" data-tooltip="Css">
-                    <span class="sr-only">Css</span> 
-                </div>
-                <!-- Compétence HTML/CSS -->
-                <div class="competence-item">
-                    <img src="asset/html.png" alt="HTML5" loading="lazy" data-tooltip="HTML5">
-                    <span class="sr-only">HTML5</span>
-                </div>
-                <!-- Compétence PHP -->
-                <div class="competence-item">
-                    <img src="asset/php.png" alt="PHP" loading="lazy" data-tooltip="PHP">
-                    <span class="sr-only">PHP</span>
-                </div>
-                <!-- Compétence Java -->
-                <div class="competence-item">
-                    <img src="asset/java.png" alt="JAVA" loading="lazy" data-tooltip="JAVA">
-                    <span class="sr-only">JAVA</span>
-                </div>
-                <!-- Compétence MySQL -->
-                <div class="competence-item">
-                    <img src="asset/mysql.png" alt="MySQL" loading="lazy" data-tooltip="MySQL">
-                    <span class="sr-only">MySQL</span>
-                </div>
+                </p>
             </div>
         </section>
+        
 
+        <section id="formations" class="formations">
+            <h2>Formations & Certifications</h2>
+            <ul class="formation-list">
+                <li>
+                    <strong>BTS SIO option SLAM</strong> - Lycée [Nom du lycée] - 2023 à 2025
+                </li>
+                <li>
+                    <strong>Certification HTML/CSS</strong> - OpenClassrooms - 2024
+                </li>
+                <li>
+                    <strong>Certification Java</strong> - Oracle Certified Associate - En cours
+                </li>
+            </ul>
+        </section>
         <!-- SECTION PROJETS -->
         <section id="projets" class="mes-projets">
             <h2>Mes Réalisations</h2>
@@ -171,7 +144,109 @@
                 </article>
             </div>
         </section>
-
+        <!-- SECTION COMPÉTENCES -->
+        <section id="competences" class="competences">
+            <h2>Compétences Techniques</h2>
+            <div class="competences-grid">
+                    <!-- Compétence JS -->
+                <div class="competence-item">
+                    <img src="asset/css.png" alt="Css" loading="lazy" data-tooltip="Css">
+                    <span class="sr-only">Css</span> 
+                </div>
+                <!-- Compétence HTML/CSS -->
+                <div class="competence-item">
+                    <img src="asset/html.png" alt="HTML5" loading="lazy" data-tooltip="HTML5">
+                    <span class="sr-only">HTML5</span>
+                </div>
+                <!-- Compétence PHP -->
+                <div class="competence-item">
+                    <img src="asset/php.png" alt="PHP" loading="lazy" data-tooltip="PHP">
+                    <span class="sr-only">PHP</span>
+                </div>
+                <!-- Compétence Java -->
+                <div class="competence-item">
+                    <img src="asset/java.png" alt="JAVA" loading="lazy" data-tooltip="JAVA">
+                    <span class="sr-only">JAVA</span>
+                </div>
+                <!-- Compétence MySQL -->
+                <div class="competence-item">
+                    <img src="asset/mysql.png" alt="MySQL" loading="lazy" data-tooltip="MySQL">
+                    <span class="sr-only">MySQL</span>
+                </div>
+            </div>
+        </section>
+        <section id="soft-skills" class="soft-skills">
+            <h2>Mes Compétences Personnelles</h2>
+            <ul class="skills-list">
+                <li>Esprit d'équipe</li>
+                <li>Autonomie</li>
+                <li>Adaptabilité</li>
+                <li>Créativité</li>
+                <li>Résolution de problèmes</li>
+            </ul>
+        </section>
+        <section id="interets" class="interets">
+            <h2>Mes Centres d'intérêt</h2>
+            <div class="interets-container">
+                <div class="interet-item">
+                    <img src="./asset/coding.jpg" alt="Codage">
+                    <p>Codage</p>
+                </div>
+                <div class="interet-item">
+                    <img src="./asset/ai.jpg" alt="Intelligence artificielle">
+                    <p>Intelligence artificielle</p>
+                </div>
+                <div class="interet-item">
+                    <img src="./asset/gaming.jpg" alt="Gaming">
+                    <p>Gaming</p>
+                </div>
+            </div>
+        </section>
+        <section id="langues" class="langues">
+            <h2>Langues parlées</h2>
+            <ul>
+                <li>Arabe - Langue maternelle</li>
+                <li>Français - niveau professionel</li>
+                <li>Anglais- Courant (niveau B1)</li>
+            </ul>
+        </section>
+                        
+        
+        <section id="bts-sio">
+            <h2>BTS SIO - Option SLAM</h2>
+            <p>Le BTS Services Informatiques aux Organisations option Solutions Logicielles et Applications Métiers forme des spécialistes du développement logiciel...</p>
+            <a href="https://www.education.gouv.fr/reussir-au-lycee/le-bts-services-informatiques-aux-organisations-sio-104114" target="_blank">Voir le référentiel officiel ↗</a>
+        </section>
+        
+        <section id="veille-techno">
+            <h2>Veille Technologique - Intelligence Artificielle</h2>
+            <article>
+                <h3>ChatGPT et les applications concrètes en entreprise</h3>
+                <p>ChatGPT d'OpenAI révolutionne le domaine du support client en automatisant efficacement les interactions humaines...</p>
+                <a href="https://openai.com/blog/chatgpt" target="_blank">En savoir plus ↗</a>
+            </article>
+            <article>
+                <h3>La place de l'IA dans le développement Web moderne</h3>
+                <p>Comment l'IA optimise la création, la gestion et l'analyse de sites web grâce à l'automatisation intelligente des processus...</p>
+                <a href="https://ai.googleblog.com/" target="_blank">En savoir plus ↗</a>
+            </article>
+        </section>
+        
+        <section id="temoignages">
+            <h2>Expériences et Témoignages</h2>
+            <blockquote>
+                « Ce stage m'a permis d'approfondir mes compétences en Java et MySQL et d'acquérir une expérience précieuse sur les méthodologies agiles. »
+                <cite>– Stage chez [nom de l'entreprise]</cite>
+            </blockquote>
+        </section>
+        <section id="temoignages">
+            <h2>Témoignages</h2>
+            <blockquote>
+                « Ce stage m'a permis d'approfondir mes compétences en Java et MySQL et d'acquérir une expérience précieuse sur les méthodologies agiles. »
+                <cite>– Stage chez [nom de l'entreprise]</cite>
+            </blockquote>
+        </section>
+        
         <!-- SECTION CONTACT -->
         <section id="contact" class="contact">
             <h2>Contact</h2>
