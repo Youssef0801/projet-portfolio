@@ -1,0 +1,63 @@
+section {
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.projets-container,
+.competences-grid,
+.interets-container,
+.techno-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.projet-card,
+.competence-item,
+.interet-item,
+.techno-item {
+    background: #f9fafb;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.projet-image img,
+.competence-item img,
+.interet-item img,
+.techno-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.skills-list,
+.formation-list,
+.langues ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+}
+
+.contact-form .cta {
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+}

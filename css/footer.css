@@ -1,0 +1,26 @@
+.main-footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer-links,
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-links a,
+.social-links img {
+    color: white;
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
