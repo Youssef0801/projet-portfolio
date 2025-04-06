@@ -13,18 +13,22 @@
 
 .nav-links {
     display: flex;
+    color: white;
     gap: 2rem;
     list-style: none;
 }
 
 .nav-link {
-    color: white;
+    color: rgb(171, 193, 193);
     text-decoration: none;
     font-weight: bold;
 }
-
+.active {
+    color: white;
+    text-transform: uppercase;
+}
 .nav-link:hover {
-    color: #facc15;
+    color: #559ede;
 }
 
 .theme-toggle {

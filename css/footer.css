@@ -2,7 +2,7 @@
     background-color: #1f2937;
     color: white;
     text-align: center;
-    padding: 2rem;
+    padding: .1rem;
 }
 
 .footer-links,
@@ -11,7 +11,7 @@
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .footer-links a,
@@ -23,4 +23,10 @@
 .social-links img {
     width: 24px;
     height: 24px;
+}
+.social-links img:hover {
+    filter: brightness(0.8);
+}
+.footer-links a:hover {
+    color: #559ede;
 }

@@ -36,27 +36,24 @@
     <link rel="stylesheet" href="./css/footer.css">
     <title>Portfolio YOUSSEF</title>
 </head>
+
 <body>
-    <!-- HEADER -->
     <header class="main-header">
         <nav class="navbar">
-                <!-- Liens de navigation mis à jour pour pointer vers les sections correspondantes -->
                 <ul class="nav-links">
                     <li><a href="index.html" class="nav-link active">Accueil</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#competences">Compétences</a></li>
-                    <li><a href="#veille-techno">Veille technologique</a></li>
-                    <li><a href="#bts-sio">BTS SIO</a></li>
-                    <li><a href="#a-propos">À propos</a></li>
-                    <li><a href="#formations">Formations</a></li>
-                    <li><a href="#soft-skills">Compétences personnelles</a></li>
-                    <li><a href="#interets">Centres d'intérêt</a></li>
-                    <li><a href="#langues">Langues</a></li>
-                    <li><a href="#temoignages">Témoignages</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#projets" class="nav-link ">Projets</a></li>
+                    <li><a href="#competences" class="nav-link ">Compétences</a></li>
+                    <li><a href="#veille-techno" class="nav-link ">Veille technologique</a></li>
+                    <li><a href="#bts-sio" class="nav-link ">BTS SIO</a></li>
+                    <li><a href="#a-propos" class="nav-link ">À propos</a></li>
+                    <li><a href="#formations" class="nav-link ">Formations</a></li>
+                    <li><a href="#interets" class="nav-link">Centres d'intérêt</a></li>
+                    <li><a href="#langues" class="nav-link">Langues</a></li>
+                    <li><a href="#temoignages" class="nav-link">Témoignages</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
                 
-                <!-- Bouton de changement de thème (clair/sombre) -->
                 <button class="theme-toggle" aria-label="Basculer mode clair/sombre">
                     <span class="theme-icon">🌓</span>
                 </button>
@@ -64,27 +61,23 @@
 
     </header>
 
-    <!-- MAIN -->
     <main>
-        <!-- Titre principal du site avec sous-titre -->
         <h1 class="main-title">
             <span aria-hidden="true">🎓</span>
             <strong>Développeur Web</strong>
             <small>Junior</small>
         </h1>
-          <!-- SECTION PRÉSENTATION  -->
         <section id="a-propos" class="a-propos">
             <h2>À propos de moi</h2>
             <div class="about-container">
                 <img src="./asset/photo-profil.jpg" alt="Photo de profil" class="profil-image">
                 <p>
-                    Passionné par la création de solutions numériques innovantes,
-                    je suis un Étudiant en BTS SIO option SLAM, passionné par 
+                    Je suis un Étudiant en BTS SIO option SLAM, passionné par
                     la création de solutions numériques innovantes et le
                     développement web, avec une connaissance en Java, PHP, HTML,
-                    CSS et JavaScript. Actuellement à la recherche d'un stage ou
-                    d'une alternance en tant que Développeur Web pour mettre en
-                    pratique mes compétences techniques et contribuer à des projets concrets
+                    CSS et JavaScript. Actuellement à la recherche d'une alternance en tant
+                    que Développeur Web pour mettre en pratique mes compétences techniques
+                    et contribuer à des projets concrets
                 </p>
             </div>
         </section>
@@ -94,46 +87,42 @@
             <h2>Formations & Certifications</h2>
             <ul class="formation-list">
                 <li>
-                    <strong>BTS SIO option SLAM</strong> - Lycée [Nom du lycée] - 2023 à 2025
+                    <strong>BTS SIO option SLAM</strong> ITIC PARIS - 2023 à 2025
                 </li>
                 <li>
-                    <strong>Certification HTML/CSS</strong> - OpenClassrooms - 2024
-                </li>
-                <li>
-                    <strong>Certification Java</strong> - Oracle Certified Associate - En cours
+                    <strong>Baccalauréat Science Maths - Mention Bien</strong> Lycée AJDIR AGADIR - 2022
                 </li>
             </ul>
         </section>
-        <!-- SECTION PROJETS -->
         <section id="projets" class="mes-projets">
             <h2>Mes Réalisations</h2>
             <div class="projets-container">
-                <!-- Carte de projet 1 -->
                 <article class="projet-card">
                     <div class="projet-image">
                         <img src="asset/php.png" alt="Logo php" loading="lazy">
                     </div>
                     <div class="projet-info">
-                        <h3>Nom du projet 1</h3>
+                        <h3>M2L Interface</h3>
                         <div class="projet-technos">
                             <span class="techno-tag">HTML</span>
                             <span class="techno-tag">CSS</span>
-                            <span class="techno-tag">JavaScript</span>
+                            <span class="techno-tag">PHP</span>
+                            
                         </div>
                         <p class="projet-description">
-                            Technologies utilisées : HTML, CSS, JavaScript.
+                            Technologies utilisées : HTML, CSS, JavaScript, PHP, LARAVEL.
                         </p>
                         <a href="lien_du_projet" class="projet-link" target="_blank" rel="noopener noreferrer"
                         aria-label="Voir le projet 1 (nouvelle fenêtre)">Voir le projet ↗</a>
                     </div>
                 </article>
-                <!-- Carte de projet 2 -->
                 <article class="projet-card">
                     <div class="projet-image">
                         <img src="asset/java.png" alt="Logo java" loading="lazy" class="projet-image">
                     </div>
                     <div class="projet-info">
-                        <h3>Nom du projet 2</h3>
+                        <h3>Maison de ligues</h3>
+                        </h3>
                         <div class="projet-technos">
                             <span class="techno-tag">JAVA</span>
                             <span class="techno-tag">MySQL</span>
@@ -147,31 +136,31 @@
                 </article>
             </div>
         </section>
-        <!-- SECTION COMPÉTENCES -->
+
         <section id="competences" class="competences">
             <h2>Compétences Techniques</h2>
             <div class="competences-grid">
-                    <!-- Compétence JS -->
+
                 <div class="competence-item">
                     <img src="asset/css.png" alt="Css" loading="lazy" data-tooltip="Css">
                     <span class="sr-only">Css</span> 
                 </div>
-                <!-- Compétence HTML/CSS -->
+
                 <div class="competence-item">
                     <img src="asset/html.png" alt="HTML5" loading="lazy" data-tooltip="HTML5">
                     <span class="sr-only">HTML5</span>
                 </div>
-                <!-- Compétence PHP -->
+
                 <div class="competence-item">
                     <img src="asset/php.png" alt="PHP" loading="lazy" data-tooltip="PHP">
                     <span class="sr-only">PHP</span>
                 </div>
-                <!-- Compétence Java -->
+
                 <div class="competence-item">
                     <img src="asset/java.png" alt="JAVA" loading="lazy" data-tooltip="JAVA">
                     <span class="sr-only">JAVA</span>
                 </div>
-                <!-- Compétence MySQL -->
+
                 <div class="competence-item">
                     <img src="asset/mysql.png" alt="MySQL" loading="lazy" data-tooltip="MySQL">
                     <span class="sr-only">MySQL</span>
@@ -252,11 +241,10 @@
             <h2>Témoignages</h2>
             <blockquote>
                 « Ce stage m'a permis d'approfondir mes compétences en Java et MySQL et d'acquérir une expérience précieuse sur les méthodologies agiles. »
-                <cite>– Stage chez [nom de l'entreprise]</cite>
+                <cite>– Stage chez ABM</cite>
             </blockquote>
         </section>
         
-        <!-- SECTION CONTACT -->
         <section id="contact" class="contact">
             <h2>Contact</h2>
             <form class="contact-form" id="contactForm" action="" method="POST">
