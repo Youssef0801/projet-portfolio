@@ -1,11 +1,67 @@
 section {
     padding: 3rem 2rem;
-    margin: 2rem auto;
-    max-width: 1000px;
+    margin: 4rem auto;
+    max-width: 1300px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
+.a-propos {
+    padding: var(--space-lg) 5%;
+    background-color: var(--secondary-color);
+
+}
+
+.a-propos-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1px;
+    align-items: center;
+}
+
+.a-propos-content p {
+    font-size: 1.4rem;
+    width: 800px;
+}
+.liste-faits {
+    list-style: none;
+    margin-top: var(--space-sm);
+    padding-left: 0;
+}
+
+.liste-faits li {
+    margin-bottom: var(--space-xs);
+    font-style: italic;
+}
+
+.citation {
+    margin-top: var(--space-md);
+    font-style: italic;
+    color: var(--secondary-color);
+    border-left: 4px solid var(--accent-color);
+    padding-left: var(--space-sm);
+}
+
+.liens-profil a {
+    display: inline-block;
+    margin-right: var(--space-sm);
+    text-decoration: underline;
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.liens-profil a:hover {
+    color: var(--accent-color);
+}
+
+.a-propos-photo img {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+}
+
 
 .projets-container,
 .competences-grid,
