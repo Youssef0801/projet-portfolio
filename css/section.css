@@ -1,16 +1,30 @@
+:root {
+    --padding-section: 3rem 2rem;
+    --margin-section: 4rem auto;
+    --max-width-section: 1300px;
+    --bg-section: #ffffff;
+    --radius: 8px;
+    --shadow: 0 2px 8px rgba(0,0,0,0.1);
+    --secondary-bg: #3498db;
+    --accent-color: #a5744a;
+    --primary-color: #2c3e50;
+    --text-color: #1f2937;
+    --gap-flex: 1.5rem;
+    --item-width: 200px;
+}
+
 section {
-    padding: 3rem 2rem;
-    margin: 4rem auto;
-    max-width: 1300px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: var(--padding-section);
+    margin: var(--margin-section);
+    max-width: var(--max-width-section);
+    background: var(--bg-section);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .a-propos {
-    padding: var(--space-lg) 5%;
-    background-color: var(--secondary-color);
-
+    padding: var(--padding-section);
+    background-color: var(--bg-section);
 }
 
 .a-propos-content {
@@ -24,28 +38,29 @@ section {
     font-size: 1.4rem;
     width: 800px;
 }
+
 .liste-faits {
     list-style: none;
-    margin-top: var(--space-sm);
+    margin-top: 1rem;
     padding-left: 0;
 }
 
 .liste-faits li {
-    margin-bottom: var(--space-xs);
+    margin-bottom: 0.5rem;
     font-style: italic;
 }
 
 .citation {
-    margin-top: var(--space-md);
+    margin-top: 2rem;
     font-style: italic;
-    color: var(--secondary-color);
+    color: var(--secondary-bg);
     border-left: 4px solid var(--accent-color);
-    padding-left: var(--space-sm);
+    padding-left: 1rem;
 }
 
 .liens-profil a {
     display: inline-block;
-    margin-right: var(--space-sm);
+    margin-right: 1rem;
     text-decoration: underline;
     color: var(--primary-color);
     font-weight: bold;
@@ -57,11 +72,13 @@ section {
 }
 
 .a-propos-photo img {
-    max-width: 100%;
-    border-radius: 50%;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-left: 50px;
+    border-radius: 40%;
     box-shadow: var(--shadow);
 }
-
 
 .projets-container,
 .competences-grid,
@@ -69,7 +86,7 @@ section {
 .techno-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: var(--gap-flex);
     justify-content: center;
 }
 
@@ -81,7 +98,7 @@ section {
     padding: 1rem;
     border-radius: 6px;
     text-align: center;
-    width: 200px;
+    width: var(--item-width);
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
@@ -95,8 +112,7 @@ section {
 }
 
 .skills-list,
-.formation-list,
-.langues ul {
+.formation-list {
     list-style: none;
     padding-left: 0;
 }
@@ -104,7 +120,6 @@ section {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-
     padding: .7rem .1rem;
     margin-bottom: 1rem;
     border: 1px solid #d1d5db;
@@ -112,9 +127,27 @@ section {
 }
 
 .contact-form .cta {
-    background-color: #1f2937;
+    background-color: var(--text-color);
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
     cursor: pointer;
+}
+.formation-list li,
+.skills-list {
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.interet-item img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 0.5rem;
 }
