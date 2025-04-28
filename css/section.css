@@ -179,6 +179,66 @@ section {
     color: #606060;
     line-height: 1.6;
 }
+
+
+.parcours-pro h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.parcours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--gap-flex);
+}
+
+.parcours-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.parcours-card:hover {
+    transform: translateY(-5px);
+}
+
+.parcours-card h3 {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.parcours-card p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.parcours-card ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.parcours-card ul li {
+    list-style-type: disc;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.parcours-card a {
+    font-weight: bold;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.parcours-card a:hover {
+    color: var(--secondary-bg);
+    text-decoration: underline;
+}
+
 .veille-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
