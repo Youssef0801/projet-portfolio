@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet M2L en Java</title>
-    <link rel="stylesheet" href="css/personnel.css ">
+    <link rel="stylesheet" href="css/personnel.css">
     <link rel="shortcut icon" href="./favicon/favicon_ya/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/favicon_ya/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon_ya/favicon-32x32.png">
@@ -14,54 +14,65 @@
 <body>
     <div class="container">
         <section>
-        <h1>Projet M2L en Java</h1>
-        <p><strong>Description :</strong>  Ce projet, fait en JAVA, propose la gestion des employés de ligues.<br>
-            Il a été réalisé avec Kilian Junker. <br>
-            Dans un premier temps, l'application a été faite sans interface graphique, avec juste la console.
-            Jusqu'ici, l'application offrait la possibilité de gérer les ligues(Création, ajout, modification et suppression) et 
-            leurs employés(Création, ajout, édition et suppression).
-            Pour chaque ligue, on peut choisir, toujours en ligne de commande, un de ses employés comme administrateur.
-            s'il on n'en choisit aucun, c'est le super Admin qui administre la ligue.
-        </p></p>
+            <h1>Projet M2L : Gestion du personnel des ligues en Java</h1>
+            <p><strong>Description :</strong> Le projet consiste à développer une application Java pour gérer les employés des ligues sportives affiliées à la Maison des Ligues de Lorraine (M2L).<br>
+                Ce projet, réalisé en collaboration avec Kilian Junker, propose initialement une interface en ligne de commande permettant de gérer intégralement les ligues et leurs employés (création, modification et suppression).
+                Chaque ligue peut désigner un administrateur parmi ses membres. Si aucun administrateur n'est désigné, le super-administrateur assure la gestion.
+            </p>
         </section>
+
         <section>
-        <h2>Fonctionnalités</h2>
-        <ul>
-            <li>Gestion des employés avec dates d'arrivée et de départ</li>
-            <li>Gestion des salles et des équipements</li>
-            <li>Système de réservation en ligne</li>
-            <li>Authentification et rôles utilisateurs</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Modification</h2>
-        <h3>Editer une ligue</h3>
-        <p>Changer Admin <br>Retirer Admin</p>
-        <h3>Gestion de l'employé</h3>
-        <p>A l'ajoute d'un employé : saisir la Date inscription <br>
-            Selectionnement d'un employé : Modifier ou supprimer l'employé <br>
-            Exception date invalide ( futur ou passé )</p>
-    </section>
-    <section>
-        <h2>Technologies utilisées</h2>
-        <div class="technologies">
-            <p>✔️ Java (Spring Boot) | ✔️ MySQL | ✔️ Git</p>
-        </div>
-        <h2>Notre arbre heuristique</h2>
-        <img src="./asset/arbre-heuristique.png" alt="arbre heuristique de notre projet">
-        <h2>Notre mcd est le suivant : </h2>
-        <img src="./asset/mcd.png" alt="mcd de notre projet">
-        <h2>Interface du projet (version terminal) :</h2>
-        <img src="./asset/terminal-personnel.png" alt="interface de notre projet">
-        <h2>Lien vers le code source :</h2>
-        <a class="code-source" href="https://github.com/Youssef0801/personnel"></a>
-        <h2>Contact</h2>
-        <p>Si vous avez des questions ou souhaitez contribuer, contactez-moi à <strong>assehnoune.youssef@gmail.com</strong>.</p>
+            <h2>Fonctionnalités principales :</h2>
+            <ul>
+                <li>Gestion complète des employés (création, modification, suppression)</li>
+                <li>Gestion précise des dates d'arrivée et de départ des employés (avec validation)</li>
+                <li>Gestion des ligues (création, désignation d'administrateurs, modification)</li>
+                <li>Authentification sécurisée et gestion des rôles utilisateurs (employé, administrateur, super-administrateur)</li>
+                <li>Système intégré de réservation en ligne pour salles et équipements</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Détails des modifications possibles :</h2>
+            <h3>Gestion des ligues :</h3>
+            <ul>
+                <li>Désigner ou retirer un administrateur de ligue</li>
+                <li>Modifier les informations de la ligue</li>
+            </ul>
+
+            <h3>Gestion des employés :</h3>
+            <ul>
+                <li>Ajouter un employé avec contrôle des dates (inscription, arrivée, départ)</li>
+                <li>Modifier ou supprimer un employé existant</li>
+                <li>Validation automatique des dates pour éviter les erreurs de saisie (dates passées ou futures invalides)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Technologies utilisées :</h2>
+            <div class="technologies">
+                <p>✔️ Java (Spring Boot) | ✔️ MySQL | ✔️ Git</p>
+            </div>
+
+            <h2>Arbre heuristique du projet :</h2>
+            <img src="./asset/arbre-heuristique.png" alt="Arbre heuristique du projet M2L">
+
+            <h2>Modèle Conceptuel des Données (MCD) :</h2>
+            <img src="./asset/mcd.png" alt="MCD du projet M2L">
+
+            <h2>Interface utilisateur (version terminal) :</h2>
+            <img src="./asset/terminal-personnel.png" alt="Interface en ligne de commande">
+
+            <h2>Code source :</h2>
+            <a class="code-source" href="https://github.com/Youssef0801/personnel">Voir le code source sur GitHub</a>
+
+            <h2>Contact :</h2>
+            <p>Pour toute question ou contribution, contactez-moi à l'adresse : <strong>assehnoune.youssef@gmail.com</strong>.</p>
+        </section>
     </div>
-</section>
+
     <footer>
         &copy; 2025 - Projet M2L en Java | Tous droits réservés
-
     </footer>
 </body>
 </html>
