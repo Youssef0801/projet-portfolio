@@ -350,7 +350,6 @@ cite {
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
 .projet-link:hover {
     color: var(--primary-color);
     text-decoration: underline;
