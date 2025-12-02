@@ -1,5 +1,5 @@
 # Projet portflolio
->Bonjour, je suis Youssef ASSEHNOUNE et j'ai 21 ans. Je suis actuellement étudiant en 2ème année à l'école ITIC Paris. Vous trouvez ici le lien vers mon portfolio, il sera régulièrement mis à jour.
+>Bonjour, je m'appelle Youssef ASSEHNOUNE, j'ai 22 ans et je suis actuellement étudiant en DCG en alternance. Ce portfolio présente l’ensemble de mes projets et compétences, et est régulièrement mis à jour afin de refléter ma progression académique et professionnelle.
 
 [Publication](https://youssef0801.github.io/projet-portfolio/)
 
