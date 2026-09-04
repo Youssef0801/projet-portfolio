@@ -22,3 +22,18 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(`Thème changé vers : ${newTheme}`);
     });
 });
+/* ========================================
+   PANNEAU VERSION MOBILE
+======================================== */
+
+const mobileWarning = document.getElementById("mobileWarning");
+const closeButton = document.getElementById("mobileWarningClose");
+const continueButton = document.getElementById("mobileWarningContinue");
+
+function closeMobileWarning() {
+    mobileWarning.style.display = "none";
+}
+
+closeButton.addEventListener("click", closeMobileWarning);
+
+continueButton.addEventListener("click", closeMobileWarning);

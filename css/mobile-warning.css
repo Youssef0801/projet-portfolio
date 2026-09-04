@@ -1,0 +1,129 @@
+/* ========================================
+   PANNEAU D'INFORMATION - VERSION MOBILE
+======================================== */
+
+/* Par défaut : panneau caché */
+.mobile-warning {
+    display: none;
+}
+
+/* Fenêtre principale */
+.mobile-warning-content {
+    position: relative;
+
+    width: min(90%, 420px);
+    padding: 3rem 2.5rem;
+
+    background-color: #ffffff;
+    color: #333333;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Icône téléphone */
+.mobile-warning-icon {
+    display: block;
+
+    margin-bottom: 1rem;
+
+    font-size: 4rem;
+}
+
+/* Titre */
+.mobile-warning-content h2 {
+    margin-bottom: 1rem;
+
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+/* Texte */
+.mobile-warning-content p {
+    margin-bottom: 2rem;
+
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Bouton de fermeture */
+.mobile-warning-close {
+    position: absolute;
+
+    top: 12px;
+    right: 16px;
+
+    border: none;
+    background: transparent;
+
+    color: #333333;
+
+    font-size: 2rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease;
+}
+
+/* Effet sur la croix */
+.mobile-warning-close:hover {
+    transform: scale(1.15);
+}
+
+/* Bouton "Voir quand même" */
+.mobile-warning-button {
+    padding: 0.9rem 1.6rem;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #333333;
+    color: #ffffff;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Effet au survol du bouton */
+.mobile-warning-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* ========================================
+   AFFICHAGE UNIQUEMENT SUR MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .mobile-warning {
+        display: flex;
+
+        position: fixed;
+        inset: 0;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 1.5rem;
+
+        background-color: rgba(0, 0, 0, 0.65);
+
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+
+        z-index: 9999;
+    }
+
+}
